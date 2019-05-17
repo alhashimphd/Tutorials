@@ -71,7 +71,20 @@ git add -f a.data
 git status --ignored
 
 
+## GitHub for collaboration.  Others: GitBucket, LabRepository
+# Documentation: Pro Git
 
+# link an online repositoy to our local reposity
+git remote add origin <url>
+
+# show me what is the remote repository
+git remote -v
+
+# push to origin the master
+git push origin master
+
+# pull from origion to master
+git pull origin master
 
 # Creat a copy of a repository from GitHub (use SSH instead of HTTPS b/c it does not work form me.  See https://help.github.com/en/articles/testing-your-ssh-connection)
 git clone <url>
