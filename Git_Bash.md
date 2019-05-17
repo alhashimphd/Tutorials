@@ -33,7 +33,9 @@ mv <name 1> <name 2>	# renaming
 
 rm <file>	# remove files forever!!!
 rmdir <dir>	# remove empty directory
-rm -rf */	# remove -[r]ecursive -[f]orce (don't ask me) */ root directory ==> blank hard drive
+```
+Dangrous Command - Wipe Whole Drive
+rm -rf */	# remove -[r]ecursive -[f]orce (don't ask me)
 ```
 
 Copying
@@ -86,7 +88,7 @@ head -n "$2" "$1" | tail -n "$3"
 
 Echoing
 ```
-echo				# print on screen
+echo					# print on screen
 
 echo "bla bla bla" > file.txt		# print to file, if content exist earse
 echo "bla 2" >> file.txt		# append to file
