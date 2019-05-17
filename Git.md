@@ -4,12 +4,14 @@
 - [Essintial Commands - Collaboration](#collaboration)
 
 <a name="general-info" />
+
 ## General Information
 - Git Hub is a good tool to issue releases (versions of our code) when doing  reseach so people can have access a specific version of the code that was used at the time of wirting the paper.  This is done via what is called DOI (Digital Object Identifier) which is a unique number given to a piece of code, document, etc.
 - GitHub is for collaboration.  Others: GitBucket, GitLab
 - Books: Pro Git
 
 <a name="local" />
+
 ## Essintial Commands - Local Version Control
 Configuring git for first time
 ```
@@ -125,6 +127,7 @@ git status --ignored
 ```
 
 <a name="collaboration" />
+
 ## Essintial Commands - Collaboration
 
 Link an online repositoy to our local reposity
