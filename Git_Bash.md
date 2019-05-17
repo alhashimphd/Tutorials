@@ -22,18 +22,18 @@ ls --help	# to go to the manual
 
 Moving around
 ```
-cd			# go to home
+cd		# go to home
 cd - 		# get back to where I were
 ```
 
 Removing & Renaming
 ```
-mv <file> <dir>			# move or rename
+mv <file> <dir>		# move or rename
 mv <name 1> <name 2>	# renaming
 
-rm <file>		# remove files forever!!!
-rmdir <dir>		# remove empty directory
-rm -rf */		# remove -[r]ecursive -[f]orce (don't ask me) */ root directory ==> blank hard drive
+rm <file>	# remove files forever!!!
+rmdir <dir>	# remove empty directory
+rm -rf */	# remove -[r]ecursive -[f]orce (don't ask me) */ root directory ==> blank hard drive
 ```
 
 Copying
@@ -46,10 +46,10 @@ Display Content & Information
 cat <file>		# concatenate the whole file to the screen
 less <file>		# pagnation, q to quite
 
-wc <file>			# file content info
+wc <file>		# file content info
 wc <file> -l		# number of lines
 
-wc <file> -1 > <fileL>	# store to file
+wc <file> -1 > <fileL>		# store to file
 sort <fileL>			# alphanumeric
 sort -n <fileL>			# numerically
 
@@ -60,7 +60,7 @@ tail -n 2 <file>		# last 2 lines
 Piping
 ```
 | 	# pipe command
-sort -n <fileL> | head -n 1 # don't hand me the output, send it to head command
+sort -n <fileL> | head -n 1	# don't hand me the output, send it to head command
 ```
 
 Wildcard
@@ -86,9 +86,9 @@ head -n "$2" "$1" | tail -n "$3"
 
 Echoing
 ```
-echo							# print on screen
+echo				# print on screen
 
-echo "bla bla bla" > file.txt	# print to file, if content exist earse
+echo "bla bla bla" > file.txt		# print to file, if content exist earse
 echo "bla 2" >> file.txt		# append to file
 ```
 
