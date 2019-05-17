@@ -1,7 +1,18 @@
 ## Table of Content
+- [Sources](#souces)
 - [General Information](#general-info)
 - [Essintial Commands - Local Version Control](#local)
 - [Essintial Commands - Collaboration](#collaboration)
+
+
+<a name="souces" />
+
+## Sources
+- OU Software Carpentry Workshop
+  - [Main Tutorial](https://oulib-swc.github.io/2019-05-15-ou-swc/)
+  - [Git Bash Tutorial](http://swcarpentry.github.io/shell-novice/reference/)
+  - [Ehterpad](https://pad.carpentries.org/2019-05-15-ou-swc)
+  - [Google Doc](https://docs.google.com/document/d/1aJq_X1uhaNkUj7qdZEzOcpc2Pky7eZPy76yqs0UkfrQ/edit)
 
 <a name="general-info" />
 
