@@ -31,8 +31,8 @@ Removing & Renaming
 mv <file> <dir>		# move or rename
 mv <name 1> <name 2>	# renaming
 
-rm <file>	# remove files forever!!!
-rmdir <dir>	# remove empty directory
+rm <file>		# remove files forever!!!
+rmdir <dir>		# remove empty directory
 ```
 Dangrous Command - Wipe Whole Drive
 ```
