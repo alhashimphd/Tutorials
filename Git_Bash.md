@@ -1,3 +1,19 @@
+## Table of Content
+- [Sources](#souces)
+- [General Information](#general-info)
+- [Commands Summary](#commands)
+
+<a name="souces" />
+
+## Sources
+- OU Software Carpentry Workshop
+ - [Main Tutorial](https://oulib-swc.github.io/2019-05-15-ou-swc/)
+ - [Git Tutorial](https://swcarpentry.github.io/git-novice/)
+ - [Ehterpad](https://pad.carpentries.org/2019-05-15-ou-swc)
+ - [Google Doc](https://docs.google.com/document/d/1aJq_X1uhaNkUj7qdZEzOcpc2Pky7eZPy76yqs0UkfrQ/edit)
+
+<a name="general-info" />
+
 ## General Information
 
 - Can create alias for the commoands
@@ -6,8 +22,9 @@
 - Ubuntu ... install on Windows to give unix environment
 - doulbe dashes if the flag is more than on character
 
+<a name="commands" />
 
-## Commands
+## Commands Summary
 
 Bsics
 ```
