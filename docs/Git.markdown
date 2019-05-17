@@ -8,9 +8,7 @@
 - GitHub is for collaboration.  Others: GitBucket, GitLab
 - Books: Pro Git
 
-# ==============================================================================
-# Essintial Commands - Local Version Control
-# vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+### Essintial Commands - Local Version Control
 
 git config --global user.name "Amin G. Alhashim"
 git config --global user.email "<email used for GitHub>"
