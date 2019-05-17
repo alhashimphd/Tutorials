@@ -35,6 +35,7 @@ rm <file>	# remove files forever!!!
 rmdir <dir>	# remove empty directory
 ```
 Dangrous Command - Wipe Whole Drive
+```
 rm -rf */	# remove -[r]ecursive -[f]orce (don't ask me)
 ```
 
