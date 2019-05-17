@@ -1,4 +1,4 @@
-# General Information*
+## General Information
 - Git Hub is a good tool to issue releases (versions of our code) when doing 
   reseach so people can have access a specific version of the code that was 
   used at the time of wirting the paper.  This is done via what is called 
