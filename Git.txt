@@ -52,7 +52,7 @@ git diff HEAD~2 <file name>
 # compare staged to 1 commit back
 git diff --staged HEAD~1 <file name>
 
-# show specific commit
+# show specific commit.  Use q to quite after seeing the commit
 git show HEAD~1 <file name>
 
 # remove file from stage if you discover that you are not ready to commit the file
