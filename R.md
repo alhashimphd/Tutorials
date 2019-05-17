@@ -50,7 +50,7 @@ x <- 3		# assing 3 to x
 
 Getting Help
 ```
-args(round)		# bring the interface
+args(round)	# bring the interface
 ?round		# bring the help file
 ```
 
@@ -79,11 +79,12 @@ mean(heights, na.rm = TRUE)
 ?mean
 ```
 
-## Files & Plots
+## Files, Data Frames, & Plots
 
 Loading file from repository and saving it locally on disk.  It is always a good idea to structure your workspace.  See [Best Practices for Scientific Computing](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745) paper for more information.
 ```
-download.file(url = “https://ndownloader.figshare.com/files/2292169”, destfile = “data/portal_data_joined.csv”)
+download.file(url = “https://ndownloader.figshare.com/files/2292169”, 
+	destfile = “data/portal_data_joined.csv”)
 ```
 
 Load file to R as data frame
@@ -91,7 +92,7 @@ Load file to R as data frame
 surveys <- read.csv("data/portal_data_joined.csv")
 ```
 
-Getting to know our data frame
+Inspecting data frame
 ```
 class(surveys)	# data type
 str(surveys)	# structure
@@ -112,7 +113,59 @@ Retreive specific element/row/column
 surveys[1,1]	# element[1,1]
 surveys[1, ]	# row 1
 surveys[ ,1]	# column 1
-surveys$sex		# column by name
+surveys$sex	# column by name
 
 ```
 
+Dealing with factor (categorical) columns.  R convert columns that contain characters to factors by default.  Factors are treated as integer vectors.  By default, R sorts levels in alphabetical order.
+```
+levels(surveys$sex)
+nlevels(surveys$sex)
+
+# reorder factors (to get better plots)
+surveys$sex_ordered <- factor(surveys$sex, level=c("F", "M", ""))
+str(surveys$sex_ordered)
+levels(surveys$sex_ordered)
+nlevels(surveys$sex_ordered)
+```
+
+Ploting Histogram
+```
+plot(surveys$sex)
+plos(surveys$sex_ordered)
+
+# enhance the plot
+levels(surveys$sex_ordered)[1] <- "Female"
+levels(surveys$sex_ordered)[2] <- "Male"
+plos(surveys$sex_ordered)
+```
+
+## Data Manipulation using ```dplyr``` and ```tidyr```
+
+- ```tdlyr```
+  - makes manipulation of data easier
+  - built to work with data frames directly
+  - can direclty work with data stored in an external database which give the advantage of onlying brining what we need to the memoery to work on without having to bring the whole DB
+- ```tidyr```
+  - allows to swiftly convert b/w different data formats for plotting & analysis in order to accomodate the different requirements by different functions
+    - sometime we want one row per measurement
+    - othertimes we want the data aggregated like when ploting
+
+Before using ```tdlyr``` and ```tidyr```:
+
+- Install ```tidyverse``` package: umberella-package that install several packages (tidyr, dplyr, ggplot2 tibble, etc.)
+- Load the package each session 
+
+Load the package
+```
+library("tidyverse")
+```
+
+Load & inspect data
+```
+# notice the '-' instead of '.' of basic R
+surveys <- read_csv("data/portal_data_joined.csv")
+
+str(surveys)	# structure is tbl_df (tibble)
+view(surveys)	# preview
+```
