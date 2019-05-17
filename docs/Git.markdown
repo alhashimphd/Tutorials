@@ -9,12 +9,16 @@
 - Books: Pro Git
 
 ## Essintial Commands - Local Version Control
-
+Configuring git for first time
+```
 git config --global user.name "Amin G. Alhashim"
 git config --global user.email "<email used for GitHub>"
+```
 
-# To avoid flaging changes that are raised from using different OSs
+To avoid flaging changes that are raised from using different OSs
+```
 git config --global core.autocrlf true
+```
 
 # to see list of configration settings
 git config --list
