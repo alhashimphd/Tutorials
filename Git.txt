@@ -1,4 +1,4 @@
-Git Hub is a good tool to issue realise (version of our code) while doing reseach so people can have access to that version of the code while wirting the paper since it give DOI ()
+Git Hub is a good tool to issue releases (versions of our code) when doing reseach so people can have access a specific version of the code that was used at the time of wirting the paper.  This is done via what is called DOI (Digital Object Identifier) which is a unique number given to a piece of code, document, etc.
 
 git config --global user.name "Amin G. Alhashim"
 git config --global user.email "<email used for GitHub>"
@@ -9,9 +9,10 @@ git config --global core.autocrlf true
 # to see list of configration settings
 git config --list
 
-# allow for writing permession
+# give nano a writing permession
 git config --global core.editor "nano -w"
 
+# to get help
 git config --help
 
 # initializing git to start tracking directory
@@ -20,26 +21,26 @@ git init
 # to check if git created neccessary file.  We should set a hidden folder called git
 ls -a
 
-# asking git whatsup
+# asking git about our current repository.  it is like saying whatsup!
 git status
 
 # git will keep track of files in the master directory ==> we don't need to init git in each sub directory
 # However, git will not keep track of empty folders
 
-# start tracking a file.  It is useful when working on multiple files and want only
+# start tracking a file.  It is useful when working on multiple files and want only to track one of them
 git add <file name>
 
-# create a version with a message
+# create a version (commit in git language) with a message
 git commit -m "write a nice message to remember what this version is all about"
 
-# to see information about all the version
+# to see information about all the versions (committs)
 git log
 
 # to see what is the difference b/w the current status of my files and the last commit
 # nothing will be shown if a commit just has been issued
 git diff
 
-# and if the file staged we need the option
+# and if the file staged we need the option to see the difference b/w the staged files and the last commit
 git diff --staged
 
 # compare to latest commit/version
@@ -48,6 +49,7 @@ git diff HEAD <file name>
 # compare to 2 commit back
 git diff HEAD~2 <file name>
 
+# compare staged to 1 commit back
 git diff --staged HEAD~1 <file name>
 
 # show specific commit
