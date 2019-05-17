@@ -6,7 +6,7 @@
 <a name="souces" />
 
 ## Sources
-- OU Software Carpentry Workshop
+OU Software Carpentry Workshop
  - [Main Tutorial](https://oulib-swc.github.io/2019-05-15-ou-swc/)
  - [Git Tutorial](https://swcarpentry.github.io/git-novice/)
  - [Ehterpad](https://pad.carpentries.org/2019-05-15-ou-swc)
