@@ -1,10 +1,5 @@
 ## General Information
-- Git Hub is a good tool to issue releases (versions of our code) when doing 
-  reseach so people can have access a specific version of the code that was 
-  used at the time of wirting the paper.  This is done via what is called 
-  DOI (Digital Object Identifier) which is a unique number given to a piece 
-  of code, document, etc.
-
+- Git Hub is a good tool to issue releases (versions of our code) when doing  reseach so people can have access a specific version of the code that was used at the time of wirting the paper.  This is done via what is called DOI (Digital Object Identifier) which is a unique number given to a piece of code, document, etc.
 - GitHub is for collaboration.  Others: GitBucket, GitLab
 - Books: Pro Git
 
@@ -20,21 +15,30 @@ To avoid flaging changes that are raised from using different OSs
 git config --global core.autocrlf true
 ```
 
-# to see list of configration settings
+To see list of configration settings
+```
 git config --list
+```
 
-# give nano a writing permession
+Give nano a writing permession
+```
 git config --global core.editor "nano -w"
+```
 
-# to get help
+To get help
+```
 git config --help
+```
 
-# initializing git to start tracking directory
+Initializing git to start tracking directory
+```
 git init
+```
 
-# to check if git created neccessary file.  We should set a hidden folder
-# called git
+To check if git created neccessary file.  We should set a hidden folder called git
+```
 ls -a
+```
 
 # asking git about our current repository.  it is like saying whatsup!
 git status
