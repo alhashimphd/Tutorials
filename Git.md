@@ -150,3 +150,10 @@ git push origin master
 ```
 
 After pushing, go to GitHub and ask for a pull from the creator if you think that your code is enhancing some features of the program
+
+Removing & renaming files can be done withing git to avoid the staging step
+```
+git rm <file name>
+git mv <old file name> <nenw file name>
+git mv <file> <different directory>
+```
