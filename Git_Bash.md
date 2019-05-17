@@ -31,9 +31,9 @@ Removing & Renaming
 mv <file> <dir>			# move or rename
 mv <name 1> <name 2>	# renaming
 
-rm <file>				# remove files forever!!!
-rmdir <dir>				# remove empty directory
-rm -rf */				# remove -[r]ecursive -[f]orce (don't ask me) */ root directory ==> blank hard drive
+rm <file>		# remove files forever!!!
+rmdir <dir>		# remove empty directory
+rm -rf */		# remove -[r]ecursive -[f]orce (don't ask me) */ root directory ==> blank hard drive
 ```
 
 Copying
@@ -46,8 +46,8 @@ Display Content & Information
 cat <file>		# concatenate the whole file to the screen
 less <file>		# pagnation, q to quite
 
-wc <file>				# file content info
-wc <file> -l			# number of lines
+wc <file>			# file content info
+wc <file> -l		# number of lines
 
 wc <file> -1 > <fileL>	# store to file
 sort <fileL>			# alphanumeric
@@ -94,7 +94,7 @@ echo "bla 2" >> file.txt		# append to file
 
 Running Scipts
 ```
-$ bash file.sh .. run script
+$ bash file.sh
 ```
 
 Edit Files using Editor called Nano
