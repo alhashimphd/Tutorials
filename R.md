@@ -17,7 +17,7 @@
   - [Ehterpad](https://pad.carpentries.org/2019-05-15-ou-swc)
   - [Google Doc](https://docs.google.com/document/d/1aJq_X1uhaNkUj7qdZEzOcpc2Pky7eZPy76yqs0UkfrQ/edit)
 
-< a name="general" />
+< a name="general-info" />
 
 ## General Information
 
