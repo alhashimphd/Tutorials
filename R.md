@@ -153,7 +153,7 @@ plos(surveys$sex_ordered)
 
 Before using ```tdlyr``` and ```tidyr```:
 
-- Install ```tidyverse``` package: umberella-package that install several packages (tidyr, dplyr, ggplot2 tibble, etc.)
+- Install ```tidyverse``` package: umberella-package that install several packages (tidyr, dplyr, ggplot2 tibble, magrittr, etc.)
 - Load the package each session 
 
 Load the package
@@ -166,6 +166,215 @@ Load & inspect data
 # notice the '-' instead of '.' of basic R
 surveys <- read_csv("data/portal_data_joined.csv")
 
-str(surveys)	# structure is tbl_df (tibble)
+str(surveys)	# structure: tbl_df (tibble)
 view(surveys)	# preview
+
+# select columns
+select(surveys, plot_id, species_id, weight)
+
+# select all columns except ...
+select(surveys, -sex)
+
+# choose rows based on criteria
+filter(surveys, year == 1995)
+```
+
+Piping: Sending the results of one function to another
+```
+# in multiple steps
+survey_less5 <- filter(surveys, weigth < 5)
+survey_sml <- select(survey_less5, species_id, sex, weight)
+
+# in one long step
+survey_sml <- select(filter(surveys, weigth < 5), species_id, sex, weight)
+
+# using pipe %>% of magritter package.  Use Ctrl + Shift + M to add
+survey_sml <- surveys %>%
+	filter(weight < 5) %>%
+	select(species_id, sex, weight)
+```
+
+Summary of groups of 1+ coluumn
+```
+# one factor
+surveys %>%
+	group_by(sex) %>%
+	summarise(mean_weight = mean(weight, na.rm = TRUE))
+	
+# two factors
+surveys %>%
+	group_by(sex, species) %>%
+	summarise(mean_weight = mean(weight, na.rm = TRUE))
+
+surveys %>%
+	group_by(species, sex) %>%
+	summarise(mean_weight = mean(weight, na.rm = TRUE))
+
+# to avoid using na.rm = FALSE each statistis
+surveys %>%
+	filter(!is.na(weight) %>%
+	group_by(species, sex) %>%
+	summarise(mean_weight = mean(weight), sd_weight = sd(weight), sd_count = n())
+
+# arrange by mean weight
+surveys %>%
+	filter(!is.na(weight) %>%
+	group_by(species, sex) %>%
+	summarise(mean_weight = mean(weight), sd_weight = sd(weight), sd_count = n()) %>%
+	arrange(mean_weight)
+
+# in descending order
+surveys %>%
+	filter(!is.na(weight) %>%
+	group_by(species, sex) %>%
+	summarise(mean_weight = mean(weight), sd_weight = sd(weight), sd_count = n()) %>%
+	arrange(desc(mean_weight))
+
+# by count
+	filter(!is.na(weight) %>%
+	group_by(species, sex) %>%
+	summarise(mean_weight = mean(weight), sd_weight = sd(weight), sd_count = n()) %>%
+	arrange(count)
+```
+
+Count of a categorical column
+```
+surveys %>%
+	count(sex)
+```
+
+Reshaping with gather & spreed
+```
+# prepare the needed data first
+surveys_gw <- surveys %>%
+	filter(!na.rm(weight)) %>%
+	group_by(genus, plot_id) %>%
+	summarize(mean_weight = mean(weight))
+
+# creating a 2D table where each dimension represent a category
+# the cell will represent a statistis
+surveys_spread <- surveys_gw %>%
+	spread(key = genus, value = mean_weight)
+str(surveys_spread)
+head(surveys_spread)
+
+# bring spread back
+surveys_gw <- surveys_spread %>%
+	gather(key = genus, value = mean_weight, -plot_id)
+str(surveys_gw)
+head(surveys_gw)
+```
+
+Filtering
+```
+# Remove missing data
+survey_complete <- surveys %>%
+  filter(!is.na(weight), !is.na(hindfoot_length), !is.na(sex))
+
+# Filter those that has sample greater than 50
+species_counts <- survey_complete %>%
+  count(species_id) %>%
+  filter(n >= 50)
+
+# filter only those in the indicated category
+surveys_com <- surveys %>%
+	filter(species_id %in% )
+```
+
+Saving to disk
+```
+write_cvs()
+```
+
+## Visualization Using ```ggplot2```
+
+- Help in making complex plots from data frames in simple steps
+- ggplot graphhics are built step by step by adding new elements; this makes it flexible as well as customizable
+
+Step 1: Bind the plot to specific data frame
+```
+surveys_plot <- ggplot(data = survey_complete, 
+	mapping = aes(x = weight, y = hindfoot_length))
+
+# Color for each group
+surveys_plot <- ggplot(data = survey_complete, 
+	mapping = aes(x = weight, y = hindfoot_length),
+	color=species_id)
+```
+
+Step 2: Select the type of the plot
+
+- scatter plot, dot plots, etc. > geom_point()
+- boxplots > geom_boxplot()
+- trend lines, time series, etc. > geom_line()
+
+Scatter plot
+```
+surveys_plot + geom_point()
+
+# add transparency
+surveys_plot + geom_point(alpha = 0.1)
+
+# color if not used in binding
+surveys_plot + geom_point(alpah = 0.1, color = "black")
+
+# add color if not used in binding
+surveys_plot + geom_point(alpaa = 0.1, aes(color = species_id))
+
+# make the color blend by introducing small ramdom variation in points locations
+# used when having small datasets
+surveys_plot + geom_jitter(alpah = 0.1)
+```
+
+Boxplot
+```
+surveys_plot <- ggplot(data = survey_complete, 
+	mapping = aes(x = species_id, y = weight))
+
+surveys_plot + geom_boxplot()
+
+# show data
+survey_plot + geom_boxplot(alpah = 0.5) + 
+	geom_jitter(alpha = 0.1, color = "tomato")
+
+# bring boxplot layer in front
+survey_plot + geom_jitter(alpah = 0.1, color = "tomato")
+	+ geom_boxplot(alpha = 0.7)
+```
+
+Time series data
+```
+# create appropriate dataset
+yearly_count <- survey_complete %>%
+	count(year, species_id)
+
+surveys_plot <- ggplot(data = yearly_count, 
+	mapping = aes(x = year, y = n))
+
+survey_plot + geom_line()
+
+# make it more meaningful by breaking it by category
+survey_plot + geom_line(aes(group = species_id))
+
+# make it more colorful
+survey_plot + geom_line(aes(color = species_id))
+
+# split into multiple plots
+survey_plot + geom_line() + facet_wrap(~ species_id)
+
+# split the line in each plot by sex
+yearly_sex_counts <- survey_complete %>%
+	count(year, species_id, sex)
+
+surveys_plot <- ggplot(data = yearly_sex_counts, 
+	mapping = aes(x = year, y = n))
+
+surveys_plot + geom_line(aes(color = sex))
+	+ facet_wrap(~ species_id)
+
+# remove background
+surveys_plot + geom_line(aes(color = sex))
+	+ facet_wrap(~ species_id)
+	+ theme_bw()
+	+ theme(panel.grid = element_blank())
 ```
