@@ -1,4 +1,14 @@
+## Table of Content
+- [Sources](#souces)
+- [General Information](#general-info)
+- [Data Types](#dt)
+- [Data Structure](#ds)
+- [Basics](#bsics)
+- [Files, Data Frames, & Plots](#data-frame)
+- [Data Manipulation using ```dplyr``` and ```tidyr```](#data-man)
+- [Visualization Using ```ggplot2```](#viz)
 
+< a name="souces" />
 
 ## Sources
 - OU Software Carpentry Workshop
@@ -7,10 +17,14 @@
   - [Ehterpad](https://pad.carpentries.org/2019-05-15-ou-swc)
   - [Google Doc](https://docs.google.com/document/d/1aJq_X1uhaNkUj7qdZEzOcpc2Pky7eZPy76yqs0UkfrQ/edit)
 
-## General
+< a name="general" />
+
+## General Information
 
 - Creating a project instead of a file comes with the advantage of saving the workspace settings
 - ```Ctrl+Enter``` to run the line of code
+
+< a name="dt" />
 
 ## Data Types
 
@@ -29,6 +43,8 @@ class(x)	# give the data type of x
 - numeric + logical = numeric
 - numeric + character + logical = character
 
+< a name="ds" />
+
 ## Data Structure
 
 - vector: hold single type of data
@@ -39,6 +55,8 @@ class(x)	# give the data type of x
 str(x)		# give the structure type of x
 length(x)	# length of structure
 ```
+
+< a name="basics" />
 
 ## Basics
 
@@ -78,6 +96,8 @@ mean(heights, na.rm = TRUE)
 # how to use mean
 ?mean
 ```
+
+< a name="data-frame" />
 
 ## Files, Data Frames, & Plots
 
@@ -139,6 +159,8 @@ levels(surveys$sex_ordered)[1] <- "Female"
 levels(surveys$sex_ordered)[2] <- "Male"
 plos(surveys$sex_ordered)
 ```
+
+< a name="data-man" />
 
 ## Data Manipulation using ```dplyr``` and ```tidyr```
 
@@ -285,6 +307,8 @@ Saving to disk
 ```
 write_cvs()
 ```
+
+< a name="viz" />
 
 ## Visualization Using ```ggplot2```
 
