@@ -3,7 +3,7 @@
 - [General Information](#general-info)
 - [Data Types](#dt)
 - [Data Structure](#ds)
-- [Basics](#bsics)
+- [Basics](#basics)
 - [Files, Data Frames, & Plots](#data-frame)
 - [Data Manipulation using ```dplyr``` and ```tidyr```](#data-man)
 - [Visualization Using ```ggplot2```](#viz)
