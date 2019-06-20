@@ -9,7 +9,7 @@
 - OU Software Carpentry Workshop
   - [Main Tutorial](https://oulib-swc.github.io/2019-05-15-ou-swc/)
   - [Git Tutorial](https://swcarpentry.github.io/git-novice/)
-  - [Ehterpad](https://pad.carpentries.org/2019-05-15-ou-swc)
+  - [Etherpad](https://pad.carpentries.org/2019-05-15-ou-swc)
   - [Google Doc](https://docs.google.com/document/d/1aJq_X1uhaNkUj7qdZEzOcpc2Pky7eZPy76yqs0UkfrQ/edit)
 
 <a name="general-info" />
