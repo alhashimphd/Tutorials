@@ -126,3 +126,8 @@ Create new empty file
 ```
 touch file.txt
 ```
+
+List of Excel files in a directory with their modification date
+```
+for file in ls *.xlsm; do printf "$file\t"; stat -c %y "$file" | cut -d ' ' -f1; done;
+```
