@@ -17,7 +17,7 @@
 ## General Information
 
 - Can create alias for the commoands
-- [pandoc.org](pandoc.org) ... convert markdown files into different formats
+- [pandoc.org](https://pandoc.org/) ... convert markdown files into different formats
 - **Git Bach** on Windows ... give the standard Unix IEEE commands 
 - **Ubuntu Terminal** ... install on Windows to give unix environment
 - **doulbe dashes** if the flag is more than on character
