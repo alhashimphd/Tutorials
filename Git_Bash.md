@@ -26,7 +26,7 @@
 
 ## Commands Summary
 
-Bsics
+Basics
 ```
 history
 clear
