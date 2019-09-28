@@ -127,7 +127,7 @@ Create new empty file
 touch file.txt
 ```
 
-Script to save the list of Excel files in the current directory along with their sizes (in bytes) and modification dates.  To use the script, copy and paste the code into a text file and name it ```ListAllExcelFiles.sh```.  When ready to generate the list, lauch the Git Bash Terminal and run the script by typing ```Bash ListAllExcelFiles.sh```.  A File named ```listOfExcelFiles.txt``` that contains the aformentioned information will be generated.
+Script to save the list of Excel files in the current directory along with their sizes (in bytes) and modification dates.  To use the script, copy and paste the code into a text file and name it ```ListAllExcelFiles.sh```.  When ready to generate the list, lauch the Git Bash Terminal and run the script by typing ```Bash ListAllExcelFiles.sh```.  A file named ```listOfExcelFiles.txt``` that contains the aformentioned information will be generated.
 ```
 #!/usr/bin/env bash
 
