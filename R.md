@@ -49,7 +49,8 @@ class(x)	# give the data type of x
 ## Data Structure
 
 - vector: hold single type of data
-- list: generic vector, each of its element can be different, list of lists are possible
+- matrix: 2D vector
+- list: generic vector, each of its element can be anything (character list of lists)
 - data frame: table where columns represent vectors
 - factor
 ```
