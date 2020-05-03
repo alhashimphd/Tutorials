@@ -11,9 +11,10 @@
 <a name="souces" />
 
 ## Sources
-- OU Software Carpentry Workshop
+- OU Software Carpentry Workshop (check other workshops [here](https://libraries.ou.edu/content/software-and-data-carpentry))
   - [Main Tutorial](https://oulib-swc.github.io/2019-05-15-ou-swc/)
-  - [R Tutorial](https://datacarpentry.org/R-ecology-lesson/index.html)
+  - [Data Carpentry with R](https://datacarpentry.org/R-ecology-lesson/index.html)
+  - [Software Carpentry with R](https://swcarpentry.github.io/r-novice-gapminder/)
   - [Etherpad](https://pad.carpentries.org/2019-05-15-ou-swc)
   - [Google Doc](https://docs.google.com/document/d/1aJq_X1uhaNkUj7qdZEzOcpc2Pky7eZPy76yqs0UkfrQ/edit)
 - [Intro to ggplot](https://rawcdn.githack.com/allisonhorst/data-vis/fc107e063f50ef8695b0a75ed73d74720aca2c65/data_vis_np.html) by [Allison Horst](https://github.com/allisonhorst)
