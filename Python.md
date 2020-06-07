@@ -20,3 +20,4 @@ References
 ===
 - Udacity: Introduction to Python Programming
 - [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
+ - you can use atom package [linter-python-pep8](https://atom.io/packages/linter-python-pep8) to use pep8 within your own programming environment in the Atom text editor
