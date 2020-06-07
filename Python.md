@@ -22,6 +22,9 @@ String Operations
 - "Hi" * 2 = "HiHi"
 - ```str(3.14)``` to convert to string
 - ```len("Hi") = 2```
+- "amin alashim".```title()``` = Amin Alhashim
+- ```islower()```, ```count('a')```
+- "Ali like {}".```formate```("Mohammad") = "Ali like Mohammad"
 
 Data Types
 ===
@@ -29,7 +32,6 @@ Data Types
 - ```int```: 3
 - ```string```: "3.14"
 - ```bool```: True, False
-- "amin alashim".```title()``` = Amin Alhashim
 
 References
 ===
