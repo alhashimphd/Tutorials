@@ -5,6 +5,9 @@ Notes
 - Pythonic way of naming variables: snake_case
 - ```type```(3.14) to check data type
 - ```print```("Hello") to print to screen
+- Pythons follows the **zero indexing** system which describe *how far the element from the begining of the list*
+  - ```0```: first element
+  - ```-1```: last element
 
 Data Types
 ===
@@ -15,8 +18,10 @@ Data Types
 
 Data Structures
 ===
-Collection of group of data types
-- ```list```
+Collection/Container of group of data types
+- ```list```: mutable ordered sequence of elements, can contain mix of data types
+  - ```winter_months = ["Dec", 1, "Feb"]```
+  - winter_months[0] = "Dec"
 - ```tuple```
 - ```set```
 - ```dictionary```
