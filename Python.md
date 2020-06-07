@@ -5,6 +5,8 @@ Notes
 - Pythonic way of naming variables: snake_case
 - ```type(3.14)``` to check data type
 - ```^``` is the bitwise operator not the power operator which is ```**```
+- ```//``` for integer division which round-down
+ - ```7//2 = 4``` and ```-7//2 = -4``` 
 
 Data Types
 ===
