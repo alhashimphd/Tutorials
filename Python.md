@@ -3,8 +3,25 @@ Notes
 - Python is case-sensetive
 - Spaces has meaning in Python.  This is the Pythonic way of brining structure to code
 - Pythonic way of naming variables: snake_case
-- ```type(3.14)``` to check data type
-- ```print("Hello")``` to print to screen
+- ```type```(3.14) to check data type
+- ```print```("Hello") to print to screen
+
+Data Types
+===
+- ```flaot```: 3.14, 3.
+- ```int```: 3
+- ```string```: "3.14"
+- ```bool```: True, False
+
+Data Structures
+===
+Collection of group of data types
+- ```list```
+- ```tuple```
+- ```set```
+- ```dictionary```
+- ```compound```
+
 
 Number Operations
 ===
@@ -31,14 +48,6 @@ String Methods
 - "This is a nice code".```split```() = "This", "is", "a", "nice", "code"
 - "This is a nice code".```split```(' ', 3) = "This", "is", "a", "nice code"
 - "This is a nice code".```split```(None, 3) = "This", "is", "a", "nice code"
-
-
-Data Types
-===
-- ```flaot```: 3.14, 3.
-- ```int```: 3
-- ```string```: "3.14"
-- ```bool```: True, False
 
 References
 ===
