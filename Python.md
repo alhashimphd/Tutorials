@@ -4,6 +4,7 @@ Notes
 - Spaces has meaning in Python.  This is the Pythonic way of brining structure to code
 - Pythonic way of naming variables: snake_case
 - ```type(3.14)``` to check data type
+- ```print("Hello")``` to print to screen
 
 Number Operations
 ===
@@ -11,11 +12,16 @@ Number Operations
 - ```//``` for integer division which round-down
   - ```7//2 = 3``` and ```-7//2 = -4``` 
 - e for scientific operation ```3e4 = 30,000```
+- ```int(3.14)``` to convert to integer ```3```
+- ```float(3)``` to convert to float ```3.0```
+- ```methods``` are associated with different types of objects while ```functions``` are generic
 
 String Operations
 ===
 - "Hi" + "there" = "Hithere"
 - "Hi" * 2 = "HiHi"
+- ```str(3.14)``` to convert to string
+- ```len("Hi") = 2```
 
 Data Types
 ===
@@ -23,6 +29,7 @@ Data Types
 - ```int```: 3
 - ```string```: "3.14"
 - ```bool```: True, False
+- ```"amin alashim".**title**() > Amin Alhashim```
 
 References
 ===
