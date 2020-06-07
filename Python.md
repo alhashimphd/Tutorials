@@ -6,7 +6,8 @@ Notes
 - ```type(3.14)``` to check data type
 - ```^``` is the bitwise operator not the power operator which is ```**```
 - ```//``` for integer division which round-down
- - ```7//2 = 4``` and ```-7//2 = -4``` 
+ - ```7//2 = 3``` and ```-7//2 = -4``` 
+- e for scientific operation ```3e4 = 30,000```
 
 Data Types
 ===
@@ -18,4 +19,4 @@ Data Types
 References
 ===
 - Udacity: Introduction to Python Programming
-- []()
+- [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
