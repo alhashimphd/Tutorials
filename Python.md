@@ -22,9 +22,16 @@ String Operations
 - "Hi" * 2 = "HiHi"
 - ```str(3.14)``` to convert to string
 - ```len("Hi") = 2```
+
+String Methods
+===
 - "amin alashim".```title()``` = Amin Alhashim
 - ```islower()```, ```count('a')```
 - "Ali like {}".```formate```("Mohammad") = "Ali like Mohammad"
+- "This is a nice code".```split```() = "This", "is", "a", "nice", "code"
+- "This is a nice code".```split```(' ', 3) = "This", "is", "a", "nice code"
+- "This is a nice code".```split```(None, 3) = "This", "is", "a", "nice code"
+
 
 Data Types
 ===
@@ -38,3 +45,4 @@ References
 - Udacity: Introduction to Python Programming
 - [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/)
   - you can use atom package [linter-python-pep8](https://atom.io/packages/linter-python-pep8) to use pep8 within your own programming environment in the Atom text editor
+- [String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
