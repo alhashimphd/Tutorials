@@ -29,7 +29,7 @@ Data Types
 - ```int```: 3
 - ```string```: "3.14"
 - ```bool```: True, False
-- ```"amin alashim".**title**() > Amin Alhashim```
+- "amin alashim".```title()``` = Amin Alhashim
 
 References
 ===
