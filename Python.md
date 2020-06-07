@@ -4,6 +4,7 @@ Notes
 - Spaces has meaning in Python.  This is the Pythonic way of brining structure to code
 - Pythonic way of naming variables: snake_case
 - ```type(3.14)``` to check data type
+- ```^``` is the bitwise operator not the power operator which is ```**```
 
 Data Types
 ===
