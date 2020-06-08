@@ -8,6 +8,8 @@ Notes
 - Pythons follows the **zero indexing** system which describe *how far the element from the begining of the list*
   - ```0```: first element
   - ```-1```: last element
+  - ```:```: slicing notation to slide a part of an object
+- ```in``` and ```not in```: membership operators
 
 Data Types
 ===
@@ -19,10 +21,18 @@ Data Types
 Data Structures
 ===
 Collection/Container of group of data types
-- ```list```: mutable ordered sequence of elements, can contain mix of data types
+- ```list```: mutable ordered sequence of elements, can contain mix of data types, most similar to string
   - ```winter_months = ["Dec", 1, "Feb"]```
   - winter_months[0] = "Dec"
-- ```tuple```
+  - winter_months[-1] = "Feb"
+  - winter_months[0:2] = winter_months[:2] = ["Dec", 1]
+  - len(winter_months) = 3
+  - "Feb" in winter_months = True
+  - "Feb" not in winter_months = False
+  - "!".```join```(["O", "Nice"]) = "O!"Nice!"
+  - ["1", 2, "3"].append(4) > ["1", 2, "3", 4]
+- ```tuple```: imutable ordered sequence of element, to stored related related peices of inforamtion (lagitude, latitude; x-,y-,z-coordinates)
+  - location = (31.3333, 66.0111)
 - ```set```
 - ```dictionary```
 - ```compound```
