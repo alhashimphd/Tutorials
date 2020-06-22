@@ -18,6 +18,7 @@
   - [Etherpad](https://pad.carpentries.org/2019-05-15-ou-swc)
   - [Google Doc](https://docs.google.com/document/d/1aJq_X1uhaNkUj7qdZEzOcpc2Pky7eZPy76yqs0UkfrQ/edit)
 - [Intro to ggplot](https://rawcdn.githack.com/allisonhorst/data-vis/fc107e063f50ef8695b0a75ed73d74720aca2c65/data_vis_np.html) by [Allison Horst](https://github.com/allisonhorst)
+- [R for Data Science book by Garrett Grolemund and Hadley Wickham](https://r4ds.had.co.nz/)
 
 <a name="general-info" />
 
@@ -53,6 +54,7 @@ class(x)	# give the data type of x
 - matrix: 2D vector
 - list: generic vector, each of its element can be anything (character list of lists)
 - data frame: table where columns represent vectors
+- tibbles: data frames, but slightly tweaked to work better in the tidyverse
 - factor
 ```
 str(x)		# give the structure type of x
