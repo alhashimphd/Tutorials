@@ -50,12 +50,12 @@ class(x)	# give the data type of x
 
 ## Data Structure
 
-- vector: hold single type of data
-- matrix: 2D vector
-- list: generic vector, each of its element can be anything (character list of lists)
-- data frame: table where columns represent vectors
-- tibbles: data frames, but slightly tweaked to work better in the tidyverse
-- factor
+- **vector**: hold single type of data
+- **matrix**: 2D vector
+- **list**: generic vector, each of its element can be anything (character list of lists)
+- **data frame**: table where columns represent vectors
+- **tibbles**: data frames, but slightly tweaked to work better in the tidyverse
+- **factor**
 ```
 str(x)		# give the structure type of x
 length(x)	# length of structure
