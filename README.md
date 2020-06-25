@@ -1,1 +1,1 @@
-Set of tutorials for the programming languages that I using or trying to use.  These tutorials work as an entry point where they hold essential commands that work as a reminder.
+This repository contains a set of files for each programming language that I am currently learning.  The files contain fragments of ‎code that shows either (a) how to perform generic actions such as the structure of a just read data, or (b) how to accomplish a ‎certain task such as presenting results as a table.‎
