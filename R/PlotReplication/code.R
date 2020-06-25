@@ -8,7 +8,7 @@ library(tidyverse)
 library(htmlTable)
 
 # Read data -------------------------------------------------------------------
-data <- xlsx::read.xlsx("data/PracticeSet-DrWu-v1.00.xlsx", 
+data <- xlsx::read.xlsx("dataset.xlsx", 
                         sheetName = "PracticeSet")
 
 
