@@ -36,7 +36,7 @@
 - logical
 - raw
 - imaginary numbers
-```
+```{r}
 class(x)	# give the data type of x
 ```
 
@@ -56,7 +56,7 @@ class(x)	# give the data type of x
 - **data frame**: table where columns represent vectors
 - **tibbles**: data frames, but slightly tweaked to work better in the tidyverse
 - **factor**
-```
+```{r}
 str(x)		# give the structure type of x
 length(x)	# length of structure
 ```
@@ -66,19 +66,19 @@ length(x)	# length of structure
 ## Basics
 
 Assignment
-```
+```{r}
 x <- 3		# assing 3 to x
 (x <- 3)	# assing 3 to x & print the result to console
 ```
 
 Getting Help
-```
+```{r}
 args(round)	# bring the interface
 ?round		# bring the help file
 ```
 
 Dealing with Structure
-```
+```{r}
 # concatenate set of values to create vector
 weight_g <- c(50, 60, 3, 9)
 
@@ -91,7 +91,7 @@ animals[animals == "dog" | animals == "cat"]
 ```
 
 Statistics
-```
+```{r}
 # signaling missing daa using NA
 heights <- c(2, 3, NA, 4)
 
@@ -107,18 +107,18 @@ mean(heights, na.rm = TRUE)
 ## Files, Data Frames, & Plots
 
 Loading file from repository and saving it locally on disk.  It is always a good idea to structure your workspace.  See [Best Practices for Scientific Computing](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745) paper for more information.
-```
+```{r}
 download.file(url = “https://ndownloader.figshare.com/files/2292169”, 
 	destfile = “data/portal_data_joined.csv”)
 ```
 
 Load file to R as data frame
-```
+```{r}
 surveys <- read.csv("data/portal_data_joined.csv")
 ```
 
 Inspecting data frame
-```
+```{r}
 class(surveys)	# data type
 str(surveys)	# structure
 dim(surveys)	# dimension
@@ -128,13 +128,13 @@ summary(surveys)
 ```
 
 Show first/last few objects/records/rows
-```
+```{r}
 head(surveys)
 tail(surveys)
 ```
 
 Retreive specific element/row/column
-```
+```{r}
 surveys[1,1]	# element[1,1]
 surveys[1, ]	# row 1
 surveys[ ,1]	# column 1
@@ -143,7 +143,7 @@ surveys$sex	# column by name
 ```
 
 Dealing with factor (categorical) columns.  R convert columns that contain characters to factors by default.  Factors are treated as integer vectors.  By default, R sorts levels in alphabetical order.
-```
+```{r}
 levels(surveys$sex)
 nlevels(surveys$sex)
 
@@ -155,7 +155,7 @@ nlevels(surveys$sex_ordered)
 ```
 
 Ploting Histogram
-```
+```{r}
 plot(surveys$sex)
 plos(surveys$sex_ordered)
 
@@ -184,12 +184,12 @@ Before using ```tdlyr``` and ```tidyr```:
 - Load the package each session 
 
 Load the package
-```
+```{r}
 library("tidyverse")
 ```
 
 Load & inspect data
-```
+```{r}
 # notice the '-' instead of '.' of basic R
 surveys <- read_csv("data/portal_data_joined.csv")
 
@@ -207,7 +207,7 @@ filter(surveys, year == 1995)
 ```
 
 Piping: Sending the results of one function to another
-```
+```{r}
 # in multiple steps
 survey_less5 <- filter(surveys, weigth < 5)
 survey_sml <- select(survey_less5, species_id, sex, weight)
@@ -222,7 +222,7 @@ survey_sml <- surveys %>%
 ```
 
 Summary of groups of 1+ coluumn
-```
+```{r}
 # one factor
 surveys %>%
 	group_by(sex) %>%
@@ -265,13 +265,13 @@ surveys %>%
 ```
 
 Count of a categorical column
-```
+```{r}
 surveys %>%
 	count(sex)
 ```
 
 Reshaping with gather & spreed
-```
+```{r}
 # prepare the needed data first
 surveys_gw <- surveys %>%
 	filter(!na.rm(weight)) %>%
@@ -293,7 +293,7 @@ head(surveys_gw)
 ```
 
 Filtering
-```
+```{r}
 # Remove missing data
 survey_complete <- surveys %>%
   filter(!is.na(weight), !is.na(hindfoot_length), !is.na(sex))
@@ -309,7 +309,7 @@ surveys_com <- surveys %>%
 ```
 
 Saving to disk
-```
+```{r}
 write_cvs()
 ```
 
@@ -321,7 +321,7 @@ write_cvs()
 - ggplot graphhics are built step by step by adding new elements; this makes it flexible as well as customizable
 
 Step 1: Bind the plot to specific data frame
-```
+```{r}
 surveys_plot <- ggplot(data = survey_complete, 
 	mapping = aes(x = weight, y = hindfoot_length))
 
@@ -338,7 +338,7 @@ Step 2: Select the type of the plot
 - trend lines, time series, etc. > geom_line()
 
 Scatter plot
-```
+```{r}
 surveys_plot + geom_point()
 
 # add transparency
@@ -356,7 +356,7 @@ surveys_plot + geom_jitter(alpah = 0.1)
 ```
 
 Boxplot
-```
+```{r}
 surveys_plot <- ggplot(data = survey_complete, 
 	mapping = aes(x = species_id, y = weight))
 
@@ -372,7 +372,7 @@ survey_plot + geom_jitter(alpah = 0.1, color = "tomato")
 ```
 
 Time series data
-```
+```{r}
 # create appropriate dataset
 yearly_count <- survey_complete %>%
 	count(year, species_id)
